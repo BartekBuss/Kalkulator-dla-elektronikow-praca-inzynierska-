@@ -17,9 +17,9 @@ const CalculatorScreen = () => {
   const [selectedOption3, setSelectedOption3] = useState("-");
 
   const calculateResults = () => {
-    setResult1((parseFloat(value1) * multiplier1) + (parseFloat(value2) * multiplier2) + (((parseFloat(value1) * multiplier1) * (parseFloat(value2) * multiplier2)) / (parseFloat(value3) * multiplier3)));
-    setResult2((parseFloat(value2) * multiplier2) + (parseFloat(value3) * multiplier3) + (((parseFloat(value2) * multiplier2) * (parseFloat(value3) * multiplier3)) / (parseFloat(value1) * multiplier1)));
-    setResult3((parseFloat(value3) * multiplier3) + (parseFloat(value1) * multiplier1) + (((parseFloat(value3) * multiplier3) * (parseFloat(value1) * multiplier1)) / (parseFloat(value2) * multiplier2)));
+    setResult1((((parseFloat(value1) * multiplier1) * (parseFloat(value3) * multiplier3)))/((parseFloat(value1) * multiplier1) + (parseFloat(value2) * multiplier2) + (parseFloat(value3) * multiplier3)));
+    setResult2((((parseFloat(value1) * multiplier1) * (parseFloat(value2) * multiplier2)))/((parseFloat(value1) * multiplier1) + (parseFloat(value2) * multiplier2) + (parseFloat(value3) * multiplier3)));
+    setResult3((((parseFloat(value2) * multiplier2) * (parseFloat(value3) * multiplier3)))/((parseFloat(value1) * multiplier1) + (parseFloat(value2) * multiplier2) + (parseFloat(value3) * multiplier3)));
   };
 
   const getPrefixLabel = (value) => {
@@ -70,7 +70,7 @@ const CalculatorScreen = () => {
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
-          placeholder="Ra"
+          placeholder="Rab"
           keyboardType="numeric"
           value={value1}
           onChangeText={(text) => setValue1(text)}
@@ -99,7 +99,7 @@ const CalculatorScreen = () => {
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
-          placeholder="Rb"
+          placeholder="Rbc"
           keyboardType="numeric"
           value={value2}
           onChangeText={(text) => setValue2(text)}
@@ -128,7 +128,7 @@ const CalculatorScreen = () => {
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
-          placeholder="Rc"
+          placeholder="Rca"
           keyboardType="numeric"
           value={value3}
           onChangeText={(text) => setValue3(text)}
@@ -157,9 +157,9 @@ const CalculatorScreen = () => {
       <Button title="Oblicz" onPress={calculateResults} />
 
       <View style={styles.resultContainer}>
-        <Text>Rab: {formatResult(result1)}</Text>
-        <Text>Rbc: {formatResult(result2)}</Text>
-        <Text>Rca: {formatResult(result3)}</Text>
+        <Text>Ra: {formatResult(result1)}</Text>
+        <Text>Rb: {formatResult(result2)}</Text>
+        <Text>Rc: {formatResult(result3)}</Text>
       </View>
     </View>
   );
