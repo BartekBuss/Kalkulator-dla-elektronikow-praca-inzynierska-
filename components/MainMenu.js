@@ -22,7 +22,7 @@ class MainMenu extends React.Component {
         navigation.navigate('Czestotliwosc rezonansowa');
         break;
       case 5:
-        navigation.navigate('RMS od amplitudy');
+        navigation.navigate('AmplitudaRMSMain');
         break;
       case 6:
         navigation.navigate('Tetnienia napiecia');
@@ -58,7 +58,7 @@ class MainMenu extends React.Component {
           <Image source={require('inz/pictures/rezonans.bmp')} style={styles.buttonImage} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => this.handleButtonPress(5)}>
-          <Text style={styles.buttonText}>RMS od amplitudy</Text>
+          <Text style={styles.buttonText}>RMS - amplituda</Text>
           <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => this.handleButtonPress(6)}>
