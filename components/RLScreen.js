@@ -6,8 +6,8 @@ const RLScreen = () => {
   const [value1, setValue1] = useState('');
   const [value2, setValue2] = useState('');
   const [result, setResult] = useState(0);
-  const [selectedOption1, setSelectedOption1] = useState("-");
-  const [selectedOption2, setSelectedOption2] = useState("-");
+  const [selectedOption1, setSelectedOption1] = useState("1");
+  const [selectedOption2, setSelectedOption2] = useState("1");
 
   const calculateResult = () => {
     const parsedValue1 = parseFloat(value1) * selectedOption1;
