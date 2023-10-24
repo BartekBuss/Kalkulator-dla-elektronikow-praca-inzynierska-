@@ -15,6 +15,10 @@ import RLCScreen from './components/RLCScreen';
 import AmplitudaRMSMain from './components/AmplitudaRMSMain';
 import AmplitudaRMS from './components/AmplitudaRMS';
 import RMSAmplituda from './components/RMSAmplituda';
+import RMSSinTr from './components/RMSSinTr';
+import RMSProst from './components/RMSProst';
+import AmplitudaSinTr from './components/AmplitudaSinTr';
+import AmplitudaProst from './components/AmplitudaProst';
 
 const Stack = createStackNavigator();
 
@@ -37,6 +41,10 @@ class App extends React.Component {
           <Stack.Screen name="AmplitudaRMSMain" component={AmplitudaRMSMain} />
           <Stack.Screen name="AmplitudaRMS" component={AmplitudaRMS} />
           <Stack.Screen name="RMSAmplituda" component={RMSAmplituda} />
+          <Stack.Screen name="RMSSinTr" component={RMSSinTr} />
+          <Stack.Screen name="RMSProst" component={RMSProst} />
+          <Stack.Screen name="AmplitudaSinTr" component={AmplitudaSinTr} />
+          <Stack.Screen name="AmplitudaProst" component={AmplitudaProst} />
         </Stack.Navigator>
       </NavigationContainer>
     );
