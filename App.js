@@ -10,6 +10,9 @@ import RMSOdAmplitudy from './components/RMSOdAmplitudy';
 import TetnieniaNapiecia from './components/TetnieniaNapiecia';
 import KatFazowyZLiczbyZespolonej from './components/KatFazowyZLiczbyZespolonej';
 import OblNaZespolonych from './components/OblNaZespolonych';
+import RCScreen from './components/RCScreen';
+import RLScreen from './components/RLScreen';
+import RLCScreen from './components/RLCScreen';
 
 const Stack = createStackNavigator();
 
@@ -27,6 +30,9 @@ class App extends React.Component {
           <Stack.Screen name="Tetnienia napiecia" component={TetnieniaNapiecia} />
           <Stack.Screen name="Kat fazowy z liczby zespolonej" component={KatFazowyZLiczbyZespolonej} />
           <Stack.Screen name="Obl na zespolonych" component={OblNaZespolonych} />
+          <Stack.Screen name="RCScreen" component={RCScreen} />
+          <Stack.Screen name="RLScreen" component={RLScreen} />
+          <Stack.Screen name="RLCScreen" component={RLCScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );
