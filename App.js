@@ -7,7 +7,7 @@ import TransfiguracjaTrojkatGwiazda from './components/TransfiguracjaTrojkatGwia
 import StaleCzasowe from './components/StaleCzasowe';
 import CzestotliwoscRezonansowa from './components/CzestotliwoscRezonansowa';
 import TetnieniaNapiecia from './components/TetnieniaNapiecia';
-import KatFazowyZLiczbyZespolonej from './components/KatFazowyZLiczbyZespolonej';
+import ZespoloneModKat from './components/ZespoloneModKat';
 import OblNaZespolonych from './components/OblNaZespolonych';
 import RCScreen from './components/RCScreen';
 import RLScreen from './components/RLScreen';
@@ -19,6 +19,11 @@ import RMSSinTr from './components/RMSSinTr';
 import RMSProst from './components/RMSProst';
 import AmplitudaSinTr from './components/AmplitudaSinTr';
 import AmplitudaProst from './components/AmplitudaProst';
+import TransfiguracjaMain from './components/TransfiguracjaMain';
+import ZespoloneDodawanie from './components/ZespoloneDodawanie';
+import ZespoloneOdejmowanie from './components/ZespoloneOdejmowanie';
+import ZespoloneMnozenie from './components/ZespoloneMnozenie';
+import ZespoloneDzielenie from './components/ZespoloneDzielenie';
 
 const Stack = createStackNavigator();
 
@@ -28,12 +33,13 @@ class App extends React.Component {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Kalkulator dla elektroników" component={MainMenu} />
+          <Stack.Screen name="TransfiguracjaMain" component={TransfiguracjaMain} />
           <Stack.Screen name="Transfiguracja gwiazda trojkat" component={TransfiguracjaGwiazdaTrojkat} />
           <Stack.Screen name="Transfiguracja trojkat gwiazda" component={TransfiguracjaTrojkatGwiazda} />
           <Stack.Screen name="Stale czasowe" component={StaleCzasowe} />
           <Stack.Screen name="Czestotliwosc rezonansowa" component={CzestotliwoscRezonansowa} />
           <Stack.Screen name="Tetnienia napiecia" component={TetnieniaNapiecia} />
-          <Stack.Screen name="Kat fazowy z liczby zespolonej" component={KatFazowyZLiczbyZespolonej} />
+          <Stack.Screen name="ZespoloneModKat" component={ZespoloneModKat} />
           <Stack.Screen name="Obl na zespolonych" component={OblNaZespolonych} />
           <Stack.Screen name="RCScreen" component={RCScreen} />
           <Stack.Screen name="RLScreen" component={RLScreen} />
@@ -45,6 +51,10 @@ class App extends React.Component {
           <Stack.Screen name="RMSProst" component={RMSProst} />
           <Stack.Screen name="AmplitudaSinTr" component={AmplitudaSinTr} />
           <Stack.Screen name="AmplitudaProst" component={AmplitudaProst} />
+          <Stack.Screen name="ZespoloneDodawanie" component={ZespoloneDodawanie} />
+          <Stack.Screen name="ZespoloneOdejmowanie" component={ZespoloneOdejmowanie} />
+          <Stack.Screen name="ZespoloneMnozenie" component={ZespoloneMnozenie} />
+          <Stack.Screen name="ZespoloneDzielenie" component={ZespoloneDzielenie} />
         </Stack.Navigator>
       </NavigationContainer>
     );
