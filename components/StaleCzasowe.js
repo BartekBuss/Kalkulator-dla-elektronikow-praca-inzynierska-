@@ -8,13 +8,13 @@ class StaleCzasowe extends React.Component {
 
     switch (functionNumber) {
       case 1:
-        navigation.navigate('RCScreen'); // Przekierowanie do ekranu RC
+        navigation.navigate('RC'); // Przekierowanie do ekranu RC
         break;
       case 2:
-        navigation.navigate('RLScreen'); // Przekierowanie do ekranu RL
+        navigation.navigate('RL'); // Przekierowanie do ekranu RL
         break;
       case 3:
-        navigation.navigate('RLCScreen'); // Przekierowanie do ekranu RLC
+        navigation.navigate('RLC'); // Przekierowanie do ekranu RLC
         break;
       default:
         break;

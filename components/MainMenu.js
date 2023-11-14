@@ -10,22 +10,22 @@ class MainMenu extends React.Component {
 
     switch (buttonNumber) {
       case 1:
-        navigation.navigate('TransfiguracjaMain');
+        navigation.navigate('Transfiguracja ekran wyboru');
         break;
       case 2:
-        navigation.navigate('Stale czasowe');
+        navigation.navigate('Stałe czasowe ekran wyboru');
         break;
       case 3:
-        navigation.navigate('Czestotliwosc rezonansowa');
+        navigation.navigate('Częstotliwosc rezonansowa');
         break;
       case 4:
-        navigation.navigate('AmplitudaRMSMain');
+        navigation.navigate('Obliczenia RMS-Amplituda');
         break;
       case 5:
-        navigation.navigate('Tetnienia napiecia');
+        navigation.navigate('Tętnienia napięcia');
         break;
       case 6:
-        navigation.navigate('Obl na zespolonych');
+        navigation.navigate('Obliczenia na l. zespolonych');
         break;
       default:
         break;
@@ -56,7 +56,7 @@ class MainMenu extends React.Component {
           <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => this.handleButtonPress(6)}>
-          <Text style={styles.buttonText}>Obl. na zespolonych</Text>
+          <Text style={styles.buttonText}>Obliczenia na liczbach zespolonych</Text>
           <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
         </TouchableOpacity>
       </View>

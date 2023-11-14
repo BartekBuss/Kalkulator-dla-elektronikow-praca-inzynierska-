@@ -8,19 +8,19 @@ class OblNaZespolonych extends React.Component {
 
     switch (functionNumber) {
       case 1:
-        navigation.navigate('ZespoloneDodawanie');
+        navigation.navigate('Dodawanie liczb zespolonych');
         break;
       case 2:
-        navigation.navigate('ZespoloneOdejmowanie');
+        navigation.navigate('Odejmowanie liczb zespolonych');
         break;
       case 3:
-        navigation.navigate('ZespoloneMnozenie');
+        navigation.navigate('Mnożenie liczb zespolonych');
         break;
       case 4:
-        navigation.navigate('ZespoloneDzielenie');
+        navigation.navigate('Dzielenie liczb zespolonych');
         break;    
       case 5:
-        navigation.navigate('ZespoloneModKat'); 
+        navigation.navigate('Moduł i kąt l. zespolonej'); 
         break;
       default:
         break;

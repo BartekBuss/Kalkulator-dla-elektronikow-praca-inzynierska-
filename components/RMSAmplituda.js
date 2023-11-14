@@ -8,10 +8,10 @@ class RMSAmplituda extends React.Component {
     
         switch (functionNumber) {
           case 1:
-            navigation.navigate('RMSSinTr');
+            navigation.navigate('RMS-Amplituda sinus i trójkąt');
             break;
           case 2:
-            navigation.navigate('RMSProst');
+            navigation.navigate('RMS-Aplituda prostokąt');
             break;
           default:
             break;

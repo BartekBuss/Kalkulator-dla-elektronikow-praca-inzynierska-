@@ -33,28 +33,28 @@ class App extends React.Component {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Kalkulator dla elektroników" component={MainMenu} />
-          <Stack.Screen name="TransfiguracjaMain" component={TransfiguracjaMain} />
+          <Stack.Screen name="Transfiguracja ekran wyboru" component={TransfiguracjaMain} />
           <Stack.Screen name="Transfiguracja gwiazda trojkat" component={TransfiguracjaGwiazdaTrojkat} />
           <Stack.Screen name="Transfiguracja trojkat gwiazda" component={TransfiguracjaTrojkatGwiazda} />
-          <Stack.Screen name="Stale czasowe" component={StaleCzasowe} />
-          <Stack.Screen name="Czestotliwosc rezonansowa" component={CzestotliwoscRezonansowa} />
-          <Stack.Screen name="Tetnienia napiecia" component={TetnieniaNapiecia} />
-          <Stack.Screen name="ZespoloneModKat" component={ZespoloneModKat} />
-          <Stack.Screen name="Obl na zespolonych" component={OblNaZespolonych} />
-          <Stack.Screen name="RCScreen" component={RCScreen} />
-          <Stack.Screen name="RLScreen" component={RLScreen} />
-          <Stack.Screen name="RLCScreen" component={RLCScreen} />
-          <Stack.Screen name="AmplitudaRMSMain" component={AmplitudaRMSMain} />
-          <Stack.Screen name="AmplitudaRMS" component={AmplitudaRMS} />
-          <Stack.Screen name="RMSAmplituda" component={RMSAmplituda} />
-          <Stack.Screen name="RMSSinTr" component={RMSSinTr} />
-          <Stack.Screen name="RMSProst" component={RMSProst} />
-          <Stack.Screen name="AmplitudaSinTr" component={AmplitudaSinTr} />
-          <Stack.Screen name="AmplitudaProst" component={AmplitudaProst} />
-          <Stack.Screen name="ZespoloneDodawanie" component={ZespoloneDodawanie} />
-          <Stack.Screen name="ZespoloneOdejmowanie" component={ZespoloneOdejmowanie} />
-          <Stack.Screen name="ZespoloneMnozenie" component={ZespoloneMnozenie} />
-          <Stack.Screen name="ZespoloneDzielenie" component={ZespoloneDzielenie} />
+          <Stack.Screen name="Stałe czasowe ekran wyboru" component={StaleCzasowe} />
+          <Stack.Screen name="Częstotliwosc rezonansowa" component={CzestotliwoscRezonansowa} />
+          <Stack.Screen name="Tętnienia napięcia" component={TetnieniaNapiecia} />
+          <Stack.Screen name="Moduł i kąt l. zespolonej" component={ZespoloneModKat} />
+          <Stack.Screen name="Obliczenia na l. zespolonych" component={OblNaZespolonych} />
+          <Stack.Screen name="RC" component={RCScreen} />
+          <Stack.Screen name="RL" component={RLScreen} />
+          <Stack.Screen name="RLC" component={RLCScreen} />
+          <Stack.Screen name="Obliczenia RMS-Amplituda" component={AmplitudaRMSMain} />
+          <Stack.Screen name="Amplituda-RMS" component={AmplitudaRMS} />
+          <Stack.Screen name="RMS-Amplituda" component={RMSAmplituda} />
+          <Stack.Screen name="RMS-Amplituda sinus i trójkąt" component={RMSSinTr} />
+          <Stack.Screen name="RMS-Aplituda prostokąt" component={RMSProst} />
+          <Stack.Screen name="Amplituda-RMS sinus i trójkąt" component={AmplitudaSinTr} />
+          <Stack.Screen name="Amplituda-RMS prostokąt" component={AmplitudaProst} />
+          <Stack.Screen name="Dodawanie liczb zespolonych" component={ZespoloneDodawanie} />
+          <Stack.Screen name="Odejmowanie liczb zespolonych" component={ZespoloneOdejmowanie} />
+          <Stack.Screen name="Mnożenie liczb zespolonych" component={ZespoloneMnozenie} />
+          <Stack.Screen name="Dzielenie liczb zespolonych" component={ZespoloneDzielenie} />
         </Stack.Navigator>
       </NavigationContainer>
     );

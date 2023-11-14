@@ -8,10 +8,10 @@ class AmplitudaRMSMain extends React.Component {
 
         switch (functionNumber) {
             case 1:
-                navigation.navigate('RMSAmplituda'); // Przekierowanie do ekranu RMS - Amplituda
+                navigation.navigate('RMS-Amplituda'); // Przekierowanie do ekranu RMS - Amplituda
                 break;
             case 2:
-                navigation.navigate('AmplitudaRMS'); // Przekierowanie do ekranu Amplituda - RMS
+                navigation.navigate('Amplituda-RMS'); // Przekierowanie do ekranu Amplituda - RMS
                 break;
             default:
                 break;

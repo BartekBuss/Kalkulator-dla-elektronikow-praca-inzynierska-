@@ -8,10 +8,10 @@ class AmplitudaRMS extends React.Component {
     
         switch (functionNumber) {
           case 1:
-            navigation.navigate('AmplitudaSinTr');
+            navigation.navigate('Amplituda-RMS sinus i trójkąt');
             break;
           case 2:
-            navigation.navigate('AmplitudaProst');
+            navigation.navigate('Amplituda-RMS prostokąt');
             break;
           default:
             break;
