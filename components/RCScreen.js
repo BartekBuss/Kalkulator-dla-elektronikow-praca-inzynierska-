@@ -12,6 +12,7 @@ const RCScreen = () => {
   const calculateResult = () => {
     const parsedValue1 = parseFloat(value1) * selectedOption1;
     const parsedValue2 = parseFloat(value2) * selectedOption2;
+    
     const calculatedResult = parsedValue1 * parsedValue2;
     setResult(calculatedResult);
   };
