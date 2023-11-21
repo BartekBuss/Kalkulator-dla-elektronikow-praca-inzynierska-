@@ -30,26 +30,26 @@ class OblNaZespolonych extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.buttonText}>Wybierz rodzaj obwodu:</Text>
+        <Text style={styles.buttonText}>Wybierz rodzaj obliczenia:</Text>
         <TouchableOpacity style={styles.button} onPress={() => this.handleFunctionSelection(1)}>
           <Text style={styles.buttonText}>Dodawanie</Text>
-          <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
+          <Image source={require('inz/pictures/plus.png')} style={styles.buttonImage} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => this.handleFunctionSelection(2)}>
           <Text style={styles.buttonText}>Odejmowanie</Text>
-          <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
+          <Image source={require('inz/pictures/minus.png')} style={styles.buttonImage} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => this.handleFunctionSelection(3)}>
           <Text style={styles.buttonText}>Mnożenie</Text>
-          <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
+          <Image source={require('inz/pictures/mnozenie.png')} style={styles.buttonImage} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => this.handleFunctionSelection(4)}>
           <Text style={styles.buttonText}>Dzielenie</Text>
-          <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
+          <Image source={require('inz/pictures/dzielenie.png')} style={styles.buttonImage} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => this.handleFunctionSelection(5)}>
           <Text style={styles.buttonText}>Kąt fazowy i moduł</Text>
-          <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
+          <Image source={require('inz/pictures/zespolone.png')} style={styles.buttonImage} />
         </TouchableOpacity>
       </View>
     );

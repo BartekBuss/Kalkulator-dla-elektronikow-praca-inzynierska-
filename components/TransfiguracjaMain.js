@@ -29,7 +29,7 @@ class MainMenu extends React.Component {
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => this.handleButtonPress(2)}>
           <Text style={styles.buttonText}>Transfiguracja trójkąt - gwiazda</Text>
-          <Image source={require('inz/pictures/gwiazda.png')} style={styles.buttonImage} />
+          <Image source={require('inz/pictures/trojkat.png')} style={styles.buttonImage} />
         </TouchableOpacity>
       </View>
     );

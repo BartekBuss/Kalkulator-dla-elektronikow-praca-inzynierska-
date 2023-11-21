@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Platform } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
 const TetnieniaNapiecia = () => {
@@ -61,13 +61,15 @@ const TetnieniaNapiecia = () => {
     return `${result} ${prefixes[prefixIndex]}`;
   };
 
+  const keyboardType = Platform.OS === 'ios' ? 'numbers-and-punctuation' : 'numeric';
+
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
           placeholder="Vmax"
-          keyboardType="numeric"
+          keyboardType={keyboardType}
           value={value1}
           onChangeText={(text) => setValue1(text)}
         />
@@ -95,7 +97,7 @@ const TetnieniaNapiecia = () => {
         <TextInput
           style={styles.input}
           placeholder="Vmin"
-          keyboardType="numeric"
+          keyboardType={keyboardType}
           value={value2}
           onChangeText={(text) => setValue2(text)}
         />
@@ -122,7 +124,7 @@ const TetnieniaNapiecia = () => {
       <Button title="Oblicz" onPress={calculateResult} />
 
       <View style={styles.resultContainer}>
-        <Text>Tętnienia napięcia: {formatResult(result)}V</Text>
+        <Text>Napięcie tętnień: {formatResult(result)}V</Text>
       </View>
     </View>
   );

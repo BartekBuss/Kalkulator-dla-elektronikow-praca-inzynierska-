@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Platform } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
 const CalculatorScreen = () => {
@@ -65,13 +65,17 @@ const CalculatorScreen = () => {
     return `${absResult} ${prefixes[prefixIndex]}`;
   };
 
+
+  const keyboardType = Platform.OS === 'ios' ? 'numbers-and-punctuation' : 'numeric';
+
+
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
           placeholder="Ra"
-          keyboardType="numeric"
+          keyboardType={keyboardType}
           value={value1}
           onChangeText={(text) => setValue1(text)}
         />
@@ -100,7 +104,7 @@ const CalculatorScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="Rb"
-          keyboardType="numeric"
+          keyboardType={keyboardType}
           value={value2}
           onChangeText={(text) => setValue2(text)}
         />
@@ -129,7 +133,7 @@ const CalculatorScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="Rc"
-          keyboardType="numeric"
+          keyboardType={keyboardType}
           value={value3}
           onChangeText={(text) => setValue3(text)}
         />
@@ -177,11 +181,11 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
-    marginRight: 10,
+    marginRight: 5,
     padding: 10,
     borderWidth: 1,
     borderRadius: 5,
-    maxWidth: '70%',
+    maxWidth: '60%',
   },
   picker: {
     width: 80,

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Platform} from 'react-native';
 
 const ZespoloneModKat = () => {
   const [value1, setValue1] = useState('');
@@ -25,13 +25,15 @@ const ZespoloneModKat = () => {
     }
   };
 
+  const keyboardType = Platform.OS === 'ios' ? 'numbers-and-punctuation' : 'numeric';
+
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
           placeholder="Re"
-          keyboardType="numeric"
+          keyboardType= {keyboardType}
           value={value1}
           onChangeText={(text) => setValue1(text)}
         />
@@ -41,7 +43,7 @@ const ZespoloneModKat = () => {
         <TextInput
           style={styles.input}
           placeholder="Im"
-          keyboardType="numeric"
+          keyboardType={keyboardType}
           value={value2}
           onChangeText={(text) => setValue2(text)}
         />

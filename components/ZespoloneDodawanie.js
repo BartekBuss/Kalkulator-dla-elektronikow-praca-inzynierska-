@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Dimensions, Platform } from 'react-native';
 
 const { width } = Dimensions.get('window');
 
@@ -23,6 +23,9 @@ const ZespoloneDodawanie = () => {
         setResult2(calculatedResult2);
     };
 
+    const keyboardType = Platform.OS === 'ios' ? 'numbers-and-punctuation' : 'numeric';
+
+
     return (
         <View style={styles.container}>
             <Text style={styles.buttonText}>Pierwsza liczba:</Text>
@@ -30,7 +33,7 @@ const ZespoloneDodawanie = () => {
                 <TextInput
                     style={styles.input}
                     placeholder="Re"
-                    keyboardType="numeric"
+                    keyboardType={keyboardType}
                     value={value1}
                     onChangeText={(text) => setValue1(text)}
                 />
@@ -40,7 +43,7 @@ const ZespoloneDodawanie = () => {
                 <TextInput
                     style={styles.input}
                     placeholder="Im"
-                    keyboardType="numeric"
+                    keyboardType={keyboardType}
                     value={value2}
                     onChangeText={(text) => setValue2(text)}
                 />
@@ -51,7 +54,7 @@ const ZespoloneDodawanie = () => {
                 <TextInput
                     style={styles.input}
                     placeholder="Re"
-                    keyboardType="numeric"
+                    keyboardType={keyboardType}
                     value={value3}
                     onChangeText={(text) => setValue3(text)}
                 />
@@ -61,7 +64,7 @@ const ZespoloneDodawanie = () => {
                 <TextInput
                     style={styles.input}
                     placeholder="Im"
-                    keyboardType="numeric"
+                    keyboardType={keyboardType}
                     value={value4}
                     onChangeText={(text) => setValue4(text)}
                 />

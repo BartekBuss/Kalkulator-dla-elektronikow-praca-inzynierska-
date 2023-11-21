@@ -24,11 +24,11 @@ class AmplitudaRMSMain extends React.Component {
                 <Text style={styles.buttonText}>Wybierz rodzaj obliczenia:</Text>
                 <TouchableOpacity style={styles.button} onPress={() => this.handleFunctionSelection(1)}>
                     <Text style={styles.buttonText}>RMS z Amplitudy</Text>
-                    <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
+                    <Image source={require('inz/pictures/RMS_Amplituda.png')} style={styles.buttonImage} />
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button} onPress={() => this.handleFunctionSelection(2)}>
                     <Text style={styles.buttonText}>Amplituda z RMS</Text>
-                    <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
+                    <Image source={require('inz/pictures/Amplituda_RMS.png')} style={styles.buttonImage} />
                 </TouchableOpacity>
             </View>
         );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Platform } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
 const AmplitudaProst = () => {
@@ -58,13 +58,16 @@ const AmplitudaProst = () => {
     return `${result} ${prefixes[prefixIndex]}`;
   };
 
+  const keyboardType = Platform.OS === 'ios' ? 'numbers-and-punctuation' : 'numeric';
+
+
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
           placeholder="Amplituda"
-          keyboardType="numeric"
+          keyboardType={keyboardType}
           value={value1}
           onChangeText={(text) => setValue1(text)}
         />

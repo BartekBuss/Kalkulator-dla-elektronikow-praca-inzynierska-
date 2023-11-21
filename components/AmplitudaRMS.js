@@ -24,11 +24,11 @@ class AmplitudaRMS extends React.Component {
         <Text style={styles.buttonText}>Wybierz rodzaj przebiegu:</Text>
         <TouchableOpacity style={styles.button} onPress={() => this.handleFunctionSelection(1)}>
           <Text style={styles.buttonText}>Sinusoidalny/Trójkątny</Text>
-          <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
+          <Image source={require('inz/pictures/sin.png')} style={styles.buttonImage} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => this.handleFunctionSelection(2)}>
           <Text style={styles.buttonText}>Prostokątny</Text>
-          <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
+          <Image source={require('inz/pictures/prostokat.png')} style={styles.buttonImage} />
         </TouchableOpacity>
       </View>
     );

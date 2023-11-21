@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Platform } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
 const RLCScreen = () => {
@@ -71,13 +71,16 @@ const RLCScreen = () => {
     return `${result} ${prefixes[prefixIndex]}`;
   };
 
+  const keyboardType = Platform.OS === 'ios' ? 'numbers-and-punctuation' : 'numeric';
+
+
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.input}
           placeholder="R"
-          keyboardType="numeric"
+          keyboardType={keyboardType}
           value={value1}
           onChangeText={(text) => setValue1(text)}
         />
@@ -105,7 +108,7 @@ const RLCScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="L"
-          keyboardType="numeric"
+          keyboardType={keyboardType}
           value={value2}
           onChangeText={(text) => setValue2(text)}
         />
@@ -133,7 +136,7 @@ const RLCScreen = () => {
         <TextInput
           style={styles.input}
           placeholder="C"
-          keyboardType="numeric"
+          keyboardType={keyboardType}
           value={value3}
           onChangeText={(text) => setValue3(text)}
         />

@@ -49,15 +49,15 @@ class MainMenu extends React.Component {
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => this.handleButtonPress(4)}>
           <Text style={styles.buttonText}>RMS - amplituda</Text>
-          <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
+          <Image source={require('inz/pictures/RMS_Amplituda.png')} style={styles.buttonImage} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => this.handleButtonPress(5)}>
           <Text style={styles.buttonText}>Tętnienia napięcia</Text>
-          <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
+          <Image source={require('inz/pictures/sin.png')} style={styles.buttonImage} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => this.handleButtonPress(6)}>
-          <Text style={styles.buttonText}>Obliczenia na liczbach zespolonych</Text>
-          <Image source={require('inz/pictures/kalkulator.jpg')} style={styles.buttonImage} />
+          <Text style={styles.buttonText}>Obliczenia na l. zespolonych</Text>
+          <Image source={require('inz/pictures/zespolone.png')} style={styles.buttonImage} />
         </TouchableOpacity>
       </View>
     );
