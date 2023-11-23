@@ -30,16 +30,16 @@ const CzestotliwoscRezonansowa = () => {
       setQ(0);
       setBW(0);
     } else {
-      // Obliczmy częstość kołową (ω)
+      // częstość kołowa (ω)
       const omegaValue = 1 / Math.sqrt(parsedValue2 * parsedValue3);
       setOmega(omegaValue);
 
-      // Obliczmy dobroć (Q)
-      const qValue = 1 / (parsedValue1 * Math.sqrt(parsedValue2 / parsedValue3));
+      // dobroć (Q)
+      const qValue = (omegaValue * parsedValue2) / parsedValue1;
       setQ(qValue);
 
-      // Obliczmy szerokość pasma (BW)
-      const bwValue = 1 / (parsedValue1 * parsedValue3);
+      // szerokość pasma (BW)
+      const bwValue = omegaValue/qValue;
       setBW(bwValue);
 
       if (2 * Math.PI * Math.sqrt(parsedValue2 * parsedValue3) === 0) {
