@@ -13,9 +13,6 @@ class StaleCzasowe extends React.Component {
       case 2:
         navigation.navigate('RL'); // Przekierowanie do ekranu RL
         break;
-      case 3:
-        navigation.navigate('RLC'); // Przekierowanie do ekranu RLC
-        break;
       default:
         break;
     }
@@ -32,10 +29,6 @@ class StaleCzasowe extends React.Component {
         <TouchableOpacity style={styles.button} onPress={() => this.handleFunctionSelection(2)}>
           <Text style={styles.buttonText}>RL</Text>
           <Image source={require('inz/pictures/RL.png')} style={styles.buttonImage} />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={() => this.handleFunctionSelection(3)}>
-          <Text style={styles.buttonText}>RLC</Text>
-          <Image source={require('inz/pictures/RLC.png')} style={styles.buttonImage} />
         </TouchableOpacity>
       </View>
     );

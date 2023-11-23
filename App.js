@@ -11,7 +11,6 @@ import ZespoloneModKat from './components/ZespoloneModKat';
 import OblNaZespolonych from './components/OblNaZespolonych';
 import RCScreen from './components/RCScreen';
 import RLScreen from './components/RLScreen';
-import RLCScreen from './components/RLCScreen';
 import AmplitudaRMSMain from './components/AmplitudaRMSMain';
 import AmplitudaRMS from './components/AmplitudaRMS';
 import RMSAmplituda from './components/RMSAmplituda';
@@ -43,7 +42,6 @@ class App extends React.Component {
           <Stack.Screen name="Obliczenia na l. zespolonych" component={OblNaZespolonych} />
           <Stack.Screen name="RC" component={RCScreen} />
           <Stack.Screen name="RL" component={RLScreen} />
-          <Stack.Screen name="RLC" component={RLCScreen} />
           <Stack.Screen name="Obliczenia RMS-Amplituda" component={AmplitudaRMSMain} />
           <Stack.Screen name="Amplituda-RMS" component={AmplitudaRMS} />
           <Stack.Screen name="RMS-Amplituda" component={RMSAmplituda} />
