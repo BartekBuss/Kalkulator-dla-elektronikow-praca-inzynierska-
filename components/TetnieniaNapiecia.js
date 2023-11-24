@@ -6,6 +6,8 @@ const TetnieniaNapiecia = () => {
   const [value1, setValue1] = useState('');
   const [value2, setValue2] = useState('');
   const [result, setResult] = useState(0);
+  const [result2, setResult2] = useState(0);
+
   const [selectedOption1, setSelectedOption1] = useState("1");
   const [selectedOption2, setSelectedOption2] = useState("1");
 
@@ -16,7 +18,9 @@ const TetnieniaNapiecia = () => {
     const parsedValue1 = parseFloat(value1) * selectedOption1;
     const parsedValue2 = parseFloat(value2) * selectedOption2;
     const calculatedResult = parsedValue1 - parsedValue2;
+    const calculatedResult2 = (calculatedResult/((parsedValue1 + parsedValue2) / 2)) * 100;
     setResult(calculatedResult);
+    setResult2(calculatedResult2);
   };
 
   const getPrefixLabel = (value) => {
@@ -133,6 +137,7 @@ const TetnieniaNapiecia = () => {
 
       <View style={styles.resultContainer}>
         <Text>Napięcie tętnień: {formatResult(result)}V</Text>
+        <Text>Współczynnik tętnień: {result2}%</Text>
       </View>
     </View>
   );
